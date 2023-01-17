@@ -9,6 +9,58 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: new LoginPage(),
+      theme: ThemeData(primarySwatch: Colors.red, brightness: Brightness.light),
+    );
+  }
+}
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _iconAnimationController;
+  late Animation<double> _iconAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _iconAnimationController = new AnimationController(
+        vsync: this, duration: Duration(milliseconds: 500));
+
+    _iconAnimation = new CurvedAnimation(
+        parent: _iconAnimationController, curve: Curves.bounceOut);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      backgroundColor: Colors.green,
+      body: new Stack(
+        fit: StackFit.expand,
+        children: [
+          new Image(
+            image: new AssetImage("images/img1.jpeg"),
+            fit: BoxFit.cover,
+            color: Colors.black54,
+            colorBlendMode: BlendMode.darken,
+          ),
+          new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new FlutterLogo(
+                size: 100.0,
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
