@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:new_app/login.dart';
 
 void main() {
   runApp(new MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My App",
-      home: new HomePage(),
+      home: new login(),
       theme: ThemeData(
           primarySwatch: Colors.green,
           brightness: Brightness.light,

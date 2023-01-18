@@ -32,9 +32,11 @@ class login extends StatelessWidget {
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                    label: Text("Email"),
-                    hintText: "Enter Your Email",
-                    prefixIcon: Icon(Icons.mail)),
+                  label: Text("Email"),
+                  hintText: "Enter Your Email",
+                  prefixIcon: Icon(Icons.mail),
+                  suffixIcon: Icon(Icons.check),
+                ),
               ),
               TextFormField(
                 keyboardType: TextInputType.visiblePassword,
