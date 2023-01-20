@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:new_app/login.dart';
+import 'package:new_app/customeStatefulWidget.dart';
 
 void main() {
   runApp(new MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "My App",
-      home: new login(),
+      home: MyCustomWidget(),
       theme: ThemeData(
           primarySwatch: Colors.green,
           brightness: Brightness.light,
